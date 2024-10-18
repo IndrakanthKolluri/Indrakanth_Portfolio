@@ -65,19 +65,27 @@ function ResignationApproval() {
       (pendingFilters.id ? req.id.toString() === pendingFilters.id : true) &&
       (pendingFilters.name ? req.name.includes(pendingFilters.name) : true) &&
       (pendingFilters.role ? req.role === pendingFilters.role : true) &&
+      (pendingFilters.noticePeriodDays ? req.noticePeriodDays.toString() === pendingFilters.noticePeriodDays : true) &&
+      (pendingFilters.duration ? req.duration === pendingFilters.duration : true) &&
       (pendingSearch ? 
+        req.id.toString().includes(searchText) ||
         req.name.toLowerCase().includes(searchText) ||
-        req.role.toLowerCase().includes(searchText) : true)
+        req.role.toLowerCase().includes(searchText) ||
+        req.noticePeriodDays.toString().includes(searchText) ||
+        req.duration.toLowerCase().includes(searchText) : true)
     );
   }).slice(pendingPage * rowsPerPage, (pendingPage + 1) * rowsPerPage);
-
+  
   const allRequestsToShow = allRequests.filter(req => {
     const searchText = allSearch.toLowerCase();
     return (
       (allFilters.id ? req.id.toString() === allFilters.id : true) &&
       (allFilters.name ? req.name.includes(allFilters.name) : true) &&
       (allFilters.role ? req.role === allFilters.role : true) &&
+      (allFilters.noticePeriodDays ? req.noticePeriodDays.toString() === allFilters.noticePeriodDays : true) &&
+      (allFilters.duration ? req.duration === allFilters.duration : true) &&
       (allSearch ? 
+        req.id.toString().includes(searchText) ||
         req.name.toLowerCase().includes(searchText) ||
         req.role.toLowerCase().includes(searchText) ||
         req.noticePeriodDays.toString().includes(searchText) ||
@@ -85,6 +93,7 @@ function ResignationApproval() {
         req.status.toLowerCase().includes(searchText) : true)
     );
   }).slice(allPage * rowsPerPage, (allPage + 1) * rowsPerPage);
+  
 
   const totalPendingPages = Math.ceil(pendingRequests.length / rowsPerPage);
   const totalAllPages = Math.ceil(allRequests.length / rowsPerPage);

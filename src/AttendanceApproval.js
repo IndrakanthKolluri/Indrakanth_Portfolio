@@ -72,7 +72,8 @@ function AttendanceApproval() {
         req.type.toLowerCase().includes(searchText) ||
         req.from.toLowerCase().includes(searchText) ||
         req.to.toLowerCase().includes(searchText) ||
-        req.duration.toLowerCase().includes(searchText) : true)
+        req.duration.toLowerCase().includes(searchText) ||
+        req.id.toString().includes(searchText) : true)
     );
   }).slice(pendingPage * rowsPerPage, (pendingPage + 1) * rowsPerPage);
 
@@ -88,7 +89,8 @@ function AttendanceApproval() {
         req.from.toLowerCase().includes(searchText) ||
         req.to.toLowerCase().includes(searchText) ||
         req.duration.toLowerCase().includes(searchText) ||
-        req.status.toLowerCase().includes(searchText) : true)
+        req.status.toLowerCase().includes(searchText) ||
+        req.id.toString().includes(searchText) : true)
     );
   }).slice(allPage * rowsPerPage, (allPage + 1) * rowsPerPage);
 

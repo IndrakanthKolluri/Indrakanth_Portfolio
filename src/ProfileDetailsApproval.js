@@ -61,30 +61,40 @@ function ProfileDetailsApproval() {
 
   const pendingRequestsToShow = pendingRequests.filter(req => {
     const searchText = pendingSearch.toLowerCase();
-    return (
-      (pendingFilters.id ? req.id.toString() === pendingFilters.id : true) &&
-      (pendingFilters.name ? req.name.includes(pendingFilters.name) : true) &&
-      (pendingFilters.type ? req.type === pendingFilters.type : true) &&
-      (pendingSearch ? 
-        req.name.toLowerCase().includes(searchText) ||
-        req.type.toLowerCase().includes(searchText) : true)
-    );
+    const idMatch = pendingFilters.id ? req.id.toString() === pendingFilters.id : true;
+    const nameMatch = pendingFilters.name ? req.name.includes(pendingFilters.name) : true;
+    const typeMatch = pendingFilters.type ? req.type === pendingFilters.type : true;
+  
+    const searchMatch =
+      req.id.toString().includes(searchText) ||
+      req.name.toLowerCase().includes(searchText) ||
+      req.type.toLowerCase().includes(searchText) ||
+      req.presentField.toLowerCase().includes(searchText) ||
+      req.newField.toLowerCase().includes(searchText) ||
+      req.comments.toLowerCase().includes(searchText);
+  
+    return idMatch && nameMatch && typeMatch && (searchText ? searchMatch : true);
   }).slice(pendingPage * rowsPerPage, (pendingPage + 1) * rowsPerPage);
+  
 
   const allRequestsToShow = allRequests.filter(req => {
     const searchText = allSearch.toLowerCase();
-    return (
-      (allFilters.id ? req.id.toString() === allFilters.id : true) &&
-      (allFilters.name ? req.name.includes(allFilters.name) : true) &&
-      (allFilters.type ? req.type === allFilters.type : true) &&
-      (allSearch ? 
-        req.name.toLowerCase().includes(searchText) ||
-        req.type.toLowerCase().includes(searchText) ||
-        req.presentField.toLowerCase().includes(searchText) ||
-        req.newField.toLowerCase().includes(searchText) ||
-        req.status.toLowerCase().includes(searchText) : true)
-    );
+    const idMatch = allFilters.id ? req.id.toString() === allFilters.id : true;
+    const nameMatch = allFilters.name ? req.name.includes(allFilters.name) : true;
+    const typeMatch = allFilters.type ? req.type === allFilters.type : true;
+  
+    const searchMatch =
+      req.id.toString().includes(searchText) ||
+      req.name.toLowerCase().includes(searchText) ||
+      req.type.toLowerCase().includes(searchText) ||
+      req.presentField.toLowerCase().includes(searchText) ||
+      req.newField.toLowerCase().includes(searchText) ||
+      req.status.toLowerCase().includes(searchText) ||
+      req.comments.toLowerCase().includes(searchText);
+  
+    return idMatch && nameMatch && typeMatch && (searchText ? searchMatch : true);
   }).slice(allPage * rowsPerPage, (allPage + 1) * rowsPerPage);
+  
 
   const totalPendingPages = Math.ceil(pendingRequests.length / rowsPerPage);
   const totalAllPages = Math.ceil(allRequests.length / rowsPerPage);
