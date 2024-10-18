@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import ApprovalMaster from "./ApprovalMaster";
+import LeaveApproval from "./LeaveApproval";
+import {Routes, Route} from "react-router-dom";
+import AttendanceApproval from "./AttendanceApproval";
+import ProfileDetailsApproval from "./ProfileDetailsApproval";
+import ResignationApproval from "./ResignationApproval";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <>
+    <Routes>
+    <Route path='/' element={<ApprovalMaster/>}/>
+    <Route path='/LeaveApproval' element={<LeaveApproval/>}/>
+    <Route path='/AttendanceApproval' element={<AttendanceApproval/>}/>
+    <Route path='/ProfileDetailsApproval' element={<ProfileDetailsApproval/>}/>
+    <Route path='/ResignationApproval' element={<ResignationApproval/>}/>
+
+    </Routes>
+    </>
   );
 }
 
