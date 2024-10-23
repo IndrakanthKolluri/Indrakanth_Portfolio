@@ -1,24 +1,37 @@
-import ApprovalMaster from "./ApprovalMaster";
-import LeaveApproval from "./LeaveApproval";
-import {Routes, Route} from "react-router-dom";
-import AttendanceApproval from "./AttendanceApproval";
-import ProfileDetailsApproval from "./ProfileDetailsApproval";
-import ResignationApproval from "./ResignationApproval";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 
 function App() {
   return (
-    
-    <>
-    <Routes>
-    <Route path='/' element={<ApprovalMaster/>}/>
-    <Route path='/LeaveApproval' element={<LeaveApproval/>}/>
-    <Route path='/AttendanceApproval' element={<AttendanceApproval/>}/>
-    <Route path='/ProfileDetailsApproval' element={<ProfileDetailsApproval/>}/>
-    <Route path='/ResignationApproval' element={<ResignationApproval/>}/>
-
-    </Routes>
-    </>
+    <div style={{ height: 'calc(100vh - 4rem)' }} className="flex items-center justify-center">
+      <div className="flex flex-col ">
+        <NavLink 
+          className="block w-48 text-center border border-black px-4 py-2 my-1 rounded-lg hover:bg-orange-200" 
+          to="/leaveapproval"
+        >
+          Leaves
+        </NavLink>
+        <NavLink 
+          className="block w-48 text-center border border-black px-4 py-2 my-1 rounded-lg hover:bg-orange-200" 
+          to="/AttendanceApproval"
+        >
+          Attendance
+        </NavLink>
+        <NavLink 
+          className="block w-48 text-center border border-black px-4 py-2 my-1 rounded-lg hover:bg-orange-200" 
+          to="/ProfileDetailsApproval"
+        >
+          Profile Details
+        </NavLink>
+        {/* <NavLink 
+          className="block w-48 text-center border border-black px-4 py-2 my-1 rounded-lg hover:bg-orange-200" 
+          to="/ResignationApproval"
+        >
+          Resignation
+        </NavLink> */}
+      </div>
+    </div>
   );
 }
 

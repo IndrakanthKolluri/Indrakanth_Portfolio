@@ -99,7 +99,7 @@ function AttendanceApproval() {
 
   return (
     <div>
-      <NavLink className="flex items-center justify-start px-2 py-2 overflow-x-auto border border-gray-800 rounded-md w-40 ml-5 mb-5 mt-5" to='/' >
+      <NavLink className="flex items-center justify-start px-2 py-2 overflow-x-auto border border-gray-800 rounded-md w-40 ml-5 mb-5 mt-5" to='/App' >
         <FaLessThan className="text-orange-500 mr-2" />
         <button><span className="text font-semibold text-orange-500">Previous Page</span></button>
       </NavLink>
