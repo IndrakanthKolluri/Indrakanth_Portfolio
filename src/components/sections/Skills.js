@@ -12,23 +12,24 @@ const Skills = () => {
         </h2>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="flex flex-col gap-10 w-full px-4">
         {Object.entries(SKILLS).map(([category, skills]) => (
-          <Card key={category} className="text-center">
-            <h3 className="text-lg font-semibold mb-4 text-blue-600">
+          <div key={category} className="w-full">
+            <h3 className="text-xl font-semibold mb-2 pb-1 border-b border-gray-300 dark:border-gray-600
+              bg-gradient-to-r from-blue-600 via-purple-500 to-orange-400 bg-clip-text text-transparent dark:from-purple-300 dark:via-pink-300 dark:to-orange-200">
               {category}
             </h3>
-            <div className="space-y-2">
+            <div className="flex flex-wrap gap-2 justify-start">
               {skills.map((skill, index) => (
-                <div
+                <span
                   key={index}
-                  className="px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-sm"
+                  className="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 text-sm font-medium"
                 >
                   {skill}
-                </div>
+                </span>
               ))}
             </div>
-          </Card>
+          </div>
         ))}
       </div>
     </SectionWrapper>

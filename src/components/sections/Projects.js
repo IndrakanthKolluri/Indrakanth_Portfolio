@@ -8,13 +8,13 @@ const Projects = () => {
     {
       title: "Portfolio Website",
       technologies: "React, Tailwind CSS",
-      github: "https://github.com/indrakanth-demo/portfolio-website",
+      github: "https://github.com/IndrakanthKolluri/Indrakanth_Portfolio",
       description: "Designed and developed a personal portfolio website to showcase projects, skills, and experience. Implemented a responsive, web-first design for optimal viewing across devices. Integrated contact forms and project galleries to enhance user engagement."
     },
     {
       title: "Task Tracker Application",
-      technologies: "React, CSS",
-      github: "https://github.com/indrakanth-demo/task-tracker",
+      technologies: "React, Tailwind CSS",
+      github: "https://github.com/IndrakanthKolluri/Task_Manager",
       description: "Built a task tracker app allowing users to add, edit, and delete tasks. Implemented features such as task completion toggles and filtering. Focused on intuitive UI/UX and responsive design for both desktop and mobile users."
     }
   ];

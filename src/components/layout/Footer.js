@@ -33,7 +33,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Connect</h4>
             <div className="flex space-x-4">
               <a
-                href="https://linkedin.com/in/indrakanth-demo"
+                href="https://www.linkedin.com/in/indrakanth-kolluri-a35a4925a/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-gray-800 hover:bg-blue-600 rounded-full transition-colors"
@@ -41,7 +41,7 @@ const Footer = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://github.com/indrakanth-demo"
+                href="https://github.com/IndrakanthKolluri"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-gray-800 hover:bg-gray-700 rounded-full transition-colors"
@@ -54,14 +54,14 @@ const Footer = () => {
               >
                 <Mail className="h-5 w-5" />
               </a>
-              <a
+              {/* <a
                 href="https://indrakanth-portfolio.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-gray-800 hover:bg-purple-600 rounded-full transition-colors"
               >
                 <ExternalLink className="h-5 w-5" />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

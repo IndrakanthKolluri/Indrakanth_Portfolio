@@ -7,7 +7,7 @@ const Home = () => {
   const titles = ['Frontend Developer', 'React Developer', 'Web Developer'];
 
   return (
-    <SectionWrapper id="home" className="pt-16 min-h-screen flex items-center">
+    <SectionWrapper id="home" className="pt-24 md:pt-18 min-h-screen flex items-center">
       <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
         <div className="text-center lg:text-left">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -45,7 +45,7 @@ const Home = () => {
 
           <div className="flex justify-center lg:justify-start space-x-4">
             <a
-              href="https://linkedin.com/in/indrakanth-demo"
+              href="https://www.linkedin.com/in/indrakanth-kolluri-a35a4925a/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors"
@@ -53,30 +53,32 @@ const Home = () => {
               <Linkedin className="h-6 w-6" />
             </a>
             <a
-              href="https://github.com/indrakanth-demo"
+              href="https://github.com/IndrakanthKolluri"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors"
             >
               <Github className="h-6 w-6" />
             </a>
-            <a
+            {/* <a
               href="https://indrakanth-portfolio.com"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-purple-600 hover:bg-purple-700 text-white rounded-full transition-colors"
             >
               <ExternalLink className="h-6 w-6" />
-            </a>
+            </a> */}
           </div>
         </div>
         
         <div className="mt-10 lg:mt-0 flex justify-center">
           <div className="relative">
-            <div className="w-64 h-64 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
-              <div className="w-60 h-60 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center">
-                <span className="text-6xl font-bold text-blue-600">IK</span>
-              </div>
+            <div className="w-96 h-96 flex items-center justify-center">
+              <img
+                src="/profilepic.png"
+                alt="Profile"
+                className="w-96 h-96 object-cover"
+              />
             </div>
           </div>
         </div>

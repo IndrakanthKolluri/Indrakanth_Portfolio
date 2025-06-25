@@ -39,8 +39,8 @@ const Experience = () => {
         </h2>
       </div>
 
-      <div className="max-w-4xl mx-auto">
-        <Card className="mb-8">
+      <div className="w-full px-4">
+        <div>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
             <div>
               <h3 className="text-2xl font-bold text-blue-600 mb-2">Frontend Developer Intern</h3>
@@ -76,14 +76,17 @@ const Experience = () => {
             <h4 className="text-lg font-semibold mb-4">Key Projects:</h4>
             <div className="grid md:grid-cols-2 gap-4">
               {keyProjects.map((project, index) => (
-                <div key={index} className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                <div
+                  key={index}
+                  className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg shadow"
+                >
                   <h5 className="font-semibold text-blue-600 mb-2">{project.title}</h5>
                   <p className="text-sm text-gray-600 dark:text-gray-300">{project.description}</p>
                 </div>
               ))}
             </div>
           </div>
-        </Card>
+        </div>
       </div>
     </SectionWrapper>
   );
