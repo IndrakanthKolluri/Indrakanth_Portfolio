@@ -73,11 +73,11 @@ const Home = () => {
         
         <div className="mt-10 lg:mt-0 flex justify-center">
           <div className="relative">
-            <div className="w-96 h-96 flex items-center justify-center">
+            <div className="w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 flex items-center justify-center">
               <img
                 src="/profilepic.png"
                 alt="Profile"
-                className="w-96 h-96 object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
