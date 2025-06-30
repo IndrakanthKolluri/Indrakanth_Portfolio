@@ -56,7 +56,7 @@ const Navbar = () => {
             </button>
             
             <a
-              href="/Indrakanth_Resume.pdf"
+              href="/Indrakanth_Kolluri_Resume.pdf"
               download
               className="hidden sm:flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors"
             >
