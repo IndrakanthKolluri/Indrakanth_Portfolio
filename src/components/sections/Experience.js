@@ -43,7 +43,7 @@ const Experience = () => {
         <div>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
             <div>
-              <h3 className="text-2xl font-bold text-blue-600 mb-2">Frontend Developer Intern</h3>
+              <h3 className="text-2xl font-bold text-blue-600 mb-2">Frontend Developer</h3>
               <div className="flex items-center space-x-2 mb-2">
                 <span className="text-lg font-semibold">RFCHH Software Pvt Ltd</span>
               </div>
